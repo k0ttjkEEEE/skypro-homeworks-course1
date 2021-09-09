@@ -24,7 +24,7 @@ public class Main {
 
         task4();
 
-//        task5();
+        task5();
 
     }
 
@@ -64,28 +64,27 @@ public class Main {
 
     public static void task4() {
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (int i = reverseFullName.length - 1; i >= 0; i--) {
+        for (int i = 10; i >= 0; i--) {
             System.out.print(reverseFullName[i]);
 
         }
         System.out.println();
     }
 
-//    public static void task5() {
-//        int[][] gameField = new int[3][3];
-//        for (int[] row : gameField) {
-//            for (int column : row) {
-//                gameField[0][0] = 3;
-//                gameField[0][2] = 3;
-//                gameField[1][1] = 3;
-//                gameField[2][2] = 3;
-//                gameField[2][0] = 3;
-//                System.out.print(column + " ");
-//            }
-//            System.out.println();
+    public static void task5() {
+        int[][] gameField = new int[3][3];
+        for (int i = 0; i < gameField.length; i = i + 1) {
+            gameField[i][i] = 1;
+            gameField[gameField.length - i - 1][i] = 1;
         }
-
-
+        for (int[] row : gameField) {
+            for (int column : row) {
+                System.out.print(column + " ");
+            }
+            System.out.println();
+        }
+    }
+}
 
 
 
