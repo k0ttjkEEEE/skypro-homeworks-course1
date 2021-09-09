@@ -1,5 +1,6 @@
 package pro.sky.java.course1.lesson5;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class Main {
@@ -63,11 +64,33 @@ public class Main {
 
     public static void task4() {
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (int i = 0; i < 11; i++) {
+        for (int i = reverseFullName.length - 1; i >= 0; i--) {
+            System.out.print(reverseFullName[i]);
 
         }
+        System.out.println();
     }
-}
+
+//    public static void task5() {
+//        int[][] gameField = new int[3][3];
+//        for (int[] row : gameField) {
+//            for (int column : row) {
+//                gameField[0][0] = 3;
+//                gameField[0][2] = 3;
+//                gameField[1][1] = 3;
+//                gameField[2][2] = 3;
+//                gameField[2][0] = 3;
+//                System.out.print(column + " ");
+//            }
+//            System.out.println();
+        }
+
+
+
+
+
+
+
 
 
 
