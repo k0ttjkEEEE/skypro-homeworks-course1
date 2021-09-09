@@ -12,12 +12,12 @@ public class Main {
     public static void task1() {
         int a = 0;
         while (a < 10) {
-            a = a + 1;
+            a += 1;
             System.out.println(a);
         }
         int b = 11;
         while (b > 1) {
-            b = b - 1;
+            b -= 1;
             System.out.println(b);
 
         }
