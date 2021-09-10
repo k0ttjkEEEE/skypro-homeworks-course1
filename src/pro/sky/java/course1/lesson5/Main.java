@@ -38,33 +38,32 @@ public class Main {
     }
 
     private static void task2() {
-        int[] daysInMonth = generateRandomArray();
+        int[] expencesInMonth = generateRandomArray();
         int sum = 0;
-        for (int j : daysInMonth) {
+        for (int j : expencesInMonth) {
             sum += j;
         }
-        System.out.println("Средняя сумма ежемесячных затрат составляет " + sum / 30 + " рублей");
+        System.out.println("Средняя сумма ежемесячных затрат составляет " + sum / expencesInMonth.length + " рублей");
     }
 
     private static void task3() {
-        int[] daysInMonth = generateRandomArray();
-        int sum = 0;
-        int maxSum = 99_000;
-        int minSum = 201_000;
-        for (int j : daysInMonth) {
-            if (j > maxSum) {
-                maxSum = j;
-            } else if (j < minSum) {
-                minSum = j;
+        int[] expencesInMonth = generateRandomArray();
+        int max = expencesInMonth[0];
+        int min = expencesInMonth[1];
+        for (int j : expencesInMonth) {
+            if (j > max) {
+                max = j;
+            } else if (j < min) {
+                min = j;
             }
         }
-        System.out.println("Максимальная сумма затрат " + maxSum + " рублей");
-        System.out.println("Минимальная сумма затрат " + minSum + " рублей");
+        System.out.println("Максимальная сумма затрат " + max + " рублей");
+        System.out.println("Минимальная сумма затрат " + min + " рублей");
     }
 
     public static void task4() {
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (int i = 10; i >= 0; i--) {
+        for (int i = reverseFullName.length - 1; i >= 0; i--) {
             System.out.print(reverseFullName[i]);
 
         }
@@ -73,7 +72,7 @@ public class Main {
 
     public static void task5() {
         int[][] gameField = new int[3][3];
-        for (int i = 0; i < gameField.length; i = i + 1) {
+        for (int i = 0; i < gameField.length; i++) {
             gameField[i][i] = 1;
             gameField[gameField.length - i - 1][i] = 1;
         }
@@ -85,6 +84,11 @@ public class Main {
         }
     }
 }
+
+
+
+
+
 
 
 
