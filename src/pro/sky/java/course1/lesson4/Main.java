@@ -6,6 +6,7 @@ public class Main {
         task2();
         task3();
         task4();
+        task5();
 
     }
 
@@ -52,8 +53,19 @@ public class Main {
             } else if (five) {
                 System.out.println(i + ": pong");
             } else {
-                System.out.println(i);
+                System.out.println(i + ":");
             }
+        }
+            }
+
+    public static void task5() {
+        int a = 0;
+        int b = 1;
+        for (int i = 0; i < 5; i++) {
+            System.out.print(a + " " + b + " ");
+            a += b;
+            b += a;
         }
     }
 }
+
