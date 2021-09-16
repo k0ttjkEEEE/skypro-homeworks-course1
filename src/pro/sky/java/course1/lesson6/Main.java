@@ -11,7 +11,9 @@ public class Main {
         task3();
         task4();
         task5();
-//        task6();
+        task6();
+        task7();
+//        task8();
 //        String phone = "9267711381";
 //        phone = phone.replace("-", "");
 //        phone = phone.replace(" ", "");
@@ -73,13 +75,27 @@ public class Main {
         System.out.println(lastName + firstName + middleName);
     }
 
-//    public static void task6() {
-//        String fullName = "ivanov ivan ivanovich";
-//        char[] nameIs = fullName.toCharArray();
-//        for (int i = 0; i < nameIs.length; i++) {
-//            System.out.println("Element " + i + nameIs[i]);
-//    дальше не соображу...
+    public static void task6() {
+//        Нашел решение в инете, нужны комментарии.
+        String word = "ivanov ivan ivanovich";
+        String[] wordSplit;
+        String wordCapital = "";
+        wordSplit = word.split(" ");
+        for (int i = 0; i < wordSplit.length; i++) {
+            wordCapital += wordSplit[i].substring(0, 1).toUpperCase() + wordSplit[i].substring(1) + " ";
+        }
+        System.out.println(wordCapital);
+    }
+
+    public static void task7() {
+        String numOne = "123";
+        String numTwo = "456";
+        StringBuilder number = new StringBuilder(numOne);
+        number.append(numTwo);
+        System.out.println(number);
+    }
 }
+
 
 
 
