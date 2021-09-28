@@ -3,15 +3,18 @@ package pro.sky.java.course1.lesson7;
 import java.time.LocalDate;
 
 public class Main {
-    public static void leapYear(int year) {
+
+    public static void isLeapYear(int year) {
         if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
             System.out.println("Год високосный");
         } else {
             System.out.println("Год не високосный");
         }
+
     }
 
-    public static void clOs(int date, int clOs) {
+
+    public static void isClOs(int date, int clOs) {
         if (clOs == 1 && date < 2019) {
             System.out.println("Установите lite-версию приложения для iOS по ссылке");
         } else if (clOs == 1) {
@@ -24,7 +27,7 @@ public class Main {
         }
     }
 
-    public static void delivery(int deliveryDistance) {
+    public static void isDeliveryTime(int deliveryDistance) {
         int days = 1;
         if (deliveryDistance > 20) {
             days++;
@@ -35,14 +38,15 @@ public class Main {
         System.out.println("Доставка займет " + days + " суток");
     }
 
-    public static void arrayTask() {
+    public static void isSortWrong() {
         int[] arr = {3, 2, 1, 6, 5};
         for (int i = arr.length - 1; i >= 0; i--) {
             System.out.print(arr[i]);
         }
+        System.out.println();
     }
 
-    public static void stringTask() {
+    public static void isDoublesHere() {
         String forTask = "aabccddefgghiijjkk";
         char[] arr = forTask.toCharArray();
         for (int i = 0; i < arr.length; i++) {
@@ -51,12 +55,10 @@ public class Main {
                     System.out.println("Найден дубль " + arr[i] + ", проверка остановлена.");
                     return;
                 }
-                }
             }
+        }
         System.out.println();
     }
-
-
 
     public static void main(String[] args) {
 
@@ -68,23 +70,25 @@ public class Main {
     }
 
     public static void task1() {
-        leapYear(2021);
+        isLeapYear(2021);
     }
 
     public static void task2() {
         int currentYear = LocalDate.now().getYear();
-        clOs(currentYear, 0);
+        isClOs(currentYear, 0);
     }
 
     public static void task3() {
-        delivery(95);
+        isDeliveryTime(95);
     }
 
     public static void task4() {
-        stringTask();
+        isSortWrong();
     }
 
     public static void task5() {
-        arrayTask();
+        isDoublesHere();
     }
+
 }
+

@@ -1,8 +1,5 @@
 package pro.sky.java.course1.lesson5;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
 public class Main {
 
 
