@@ -1,9 +1,9 @@
 package pro.sky.java.course1.lesson8;
 
 public class Book {
-    String name;
-    Author author;
-    int year;
+    private String name;
+    private Author author;
+    private int year;
 
     public Book(String name, Author author, int year) {
         this.name = name;
@@ -20,7 +20,7 @@ public class Book {
         return this.author;
     }
 
-    public int year() {
+    public int getYear() {
         return this.year;
     }
 
