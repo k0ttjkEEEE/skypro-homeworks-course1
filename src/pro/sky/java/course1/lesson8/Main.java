@@ -23,5 +23,12 @@ public class Main {
 
         warAndPeace.setYear(1866);
         System.out.println("warAndPeace.newYear = " + warAndPeace.getYear());
+
+    }
+
+}
+
+
     }
 }
+

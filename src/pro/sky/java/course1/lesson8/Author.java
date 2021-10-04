@@ -12,6 +12,7 @@ public class Author {
     @Override
     public String toString() {
         return "Author: " +
+
                 firstName + " " +
                 lastName;
 
@@ -35,4 +36,7 @@ public class Author {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
+}
+
 }
